@@ -16,6 +16,13 @@ import org.json.JSONObject;
 @Path("user")
 public class UserREST{
 
+	@GET
+	@Path("hello")
+	public String HelloYou()
+	{
+		return "Hello";
+	}
+	
 	@POST
 	@Path("createUser")
 	public String createUser(@FormParam("name") String name, @FormParam("ini") String ini, @FormParam("active")int active) 
